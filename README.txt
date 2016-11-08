@@ -1,3 +1,7 @@
+## Instapage CMS Plugin v3 fixed 
+This module has been developed by [Instapage](https://instapage.com) and downloaded from [https://help.instapage.com/hc/en-us/articles/207038297-Publishing-Your-Page-to-Drupal](https://help.instapage.com/hc/en-us/articles/207038297-Publishing-Your-Page-to-Drupal). Unfortunately it is not working well with profile based Drupal installations due to hard coded paths and assumption that module will always be in /sites/all/modules which is incorrect. This fix simply remove hardcoded paths and use drupal_get_path function.
+
+### Original Instapage README part
 
 Module: Instapage CMS Plugin
 Author: Instapage

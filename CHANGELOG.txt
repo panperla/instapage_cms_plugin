@@ -1,0 +1,2 @@
+08 Nov 2016
+Fixing $js_dir, $knockout_dir, $language_file initialisation with partly hard coded paths.Original way works in default Drupal setup and assume module to be installed in /sites/all/modules which excludes installation profile based Drupal installatins.In order to fix we need to use here drupal_get_path("module","instapage_cms_plugin").

@@ -44,9 +44,9 @@ function instapage_cms_plugin_uninstall()
 
 function load_instapage_cms_plugin_dashboard()
 {
-  $js_dir = Connector::getSiteURL() . '/sites/all/modules/' . INSTAPAGE_PLUGIN_DIR_NAME . '/core/assets/js';
-  $knockout_dir = Connector::getSiteURL() . '/sites/all/modules/' . INSTAPAGE_PLUGIN_DIR_NAME . '/core/knockout';
-  $language_file = Connector::getSiteURL() . '/sites/all/modules/' . INSTAPAGE_PLUGIN_DIR_NAME . '/core/assets/lang/' . Connector::getSelectedLanguage() . '.js';
+  $js_dir = drupal_get_path("module","instapage_cms_plugin") . '/core/assets/js';
+  $knockout_dir = drupal_get_path("module","instapage_cms_plugin") . '/core/knockout';
+  $language_file = drupal_get_path("module","instapage_cms_plugin") . '/core/assets/lang/' . Connector::getSelectedLanguage() . '.js';
   $options = array( 'scope' => 'footer', 'defer' => false, 'preprocess' => 'false' );
   drupal_add_js( 'var INSTAPAGE_AJAXURL = \'' . Connector::getAjaxURL() . '\';', array( 'type' => 'inline', 'scope' => 'header' ) );
   drupal_add_js( $language_file, $options );

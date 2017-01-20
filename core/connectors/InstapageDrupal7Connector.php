@@ -47,7 +47,7 @@ function load_instapage_cms_plugin_dashboard()
   $js_dir = drupal_get_path("module","instapage_cms_plugin") . '/core/assets/js';
   $knockout_dir = drupal_get_path("module","instapage_cms_plugin") . '/core/knockout';
   $language_file = drupal_get_path("module","instapage_cms_plugin") . '/core/assets/lang/' . Connector::getSelectedLanguage() . '.js';
-  $options = array( 'scope' => 'footer', 'defer' => false, 'preprocess' => 'false' );
+  $options = array( 'scope' => 'footer', 'defer' => false, 'preprocess' => false );
   drupal_add_js( 'var INSTAPAGE_AJAXURL = \'' . Connector::getAjaxURL() . '\';', array( 'type' => 'inline', 'scope' => 'header' ) );
   drupal_add_js( $language_file, $options );
   drupal_add_js( $js_dir . '/ILang.js', $options );
@@ -75,7 +75,7 @@ function load_instapage_cms_plugin_dashboard()
   drupal_add_js( $js_dir . '/snack-bars.js', $options );
   drupal_add_js( $js_dir . '/tabs.js', $options );
 
-  $options = array( 'preprocess' => 'false' );
+  $options = array( 'preprocess' => false );
   $css_dir = drupal_get_path( 'module', 'instapage_cms_plugin' ) . '/core/assets/css';
   drupal_add_css( $css_dir . '/mrwhite-reset.css', $options );
   drupal_add_css( $css_dir . '/mrwhite-ui-kit.css', $options );
